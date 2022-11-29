@@ -1,20 +1,19 @@
-# Translation labels
+# Translation Keys
 
-## Write labels in US English
+## Write keys in US English
 
 ## Prefer hyphens as delimiters or use camelCase
 
 When hyphens are not possible because of specific code language or framework use camelCase.
 
-## Categorize labels with name of component or page
+## Categorize labels with name of component, page, screen or flow
 
-- Make sure the name of the component or page is well thought before categorizing labels.
-- Categorize component in 'components' and page in 'pages'.
+- Make sure the name of category is well thought before categorizing labels.
 
 Examples:
 
-- components.notifications.idle-message-text -> Your session has expired because you were longer than %time% inactive. Please renew your selection.
-- pages.login.password-label -> Your password
+- notifications.idle-message-text -> Your session has expired because you were longer than %time% inactive. Please renew your selection.
+- login.current-password-label -> Your password
 
 ## Categorize labels used in different components or pages in ‘global’
 
@@ -43,25 +42,25 @@ Examples:
 
 ## Labels for a title end with ‘title’
 
-The term ‘title’ gives important information about its context and how it should be translated. It is also language-specific, for example: in Dutch, only the first character is capitalized; in English, all the main words are capitalized.
+The term ‘title’ gives important information about its context and how it should be translated. It is also language-specific, for example: in Dutch, only the first character is capitalized; in English, all the main words are capitalized (i.e. title casing).
 
 Examples:
 
-- login.login-title -> Login
-- checkout.payment-method-title -> Payment Method
-- checkout.payment-failed-title -> Payment was Unsuccessful
+- login.login-page.title -> Login
+- checkout.payment-method-page.title -> Payment Method
+- checkout.payment-failed-page.title -> Payment was Unsuccessful
 
 ## Labels for longer texts end with ‘text’
 
 Examples:
 
-- checkout.payment-failed-text -> Try again or change payment method.
+- checkout.payment-failed-page.text -> Try again or change payment method.
 
 ## Labels for HTML content should end with 'rich-text'
 
 Examples:
 
-- modal-window.error-rich-text -> `<p>Something went wrong.</p>`
+- checkout.payment-failed-page.rich-text -> `<p>Try again or change payment method.</p>`
 
 ## Labels for form labels end with ‘label’
 
@@ -69,8 +68,8 @@ Short description of what is expected from the user to fill in. These labels do 
 
 Examples:
 
-- personal-information.mister-short-label -> Mr.
-- personal-information.email-label -> Email
+- checkout.personal-information-page.mister-short-label -> Mr.
+- checkout.personal-information-page.email-label -> Email
 
 ## Labels for ‘form helper texts’ end with ‘helper-text’
 
@@ -78,7 +77,7 @@ Helper text are always visible directly below an input field. It helps the user 
 
 Examples:
 
-- personal-information.email-helper-text -> You will receive a confirmation by email.
+- checkout.personal-information-page.email-helper-text -> You will receive a confirmation by email.
 
 ## Labels for ‘form feedback texts’ end with ‘feedback-text’
 
@@ -86,7 +85,7 @@ Feedback text gives feedback about why the data within an input field is incorre
 
 Examples:
 
-- personal-information.email-empty-feedback-text -> Your email address is needed to finish your booking.
+- checkout.personal-information-page.email-empty-feedback-text -> Your email address is needed to finish your booking.
 
 ## Labels for file names end with ‘file-name’
 
@@ -114,5 +113,5 @@ A button or link that refers to a page or form in which the action can be perfor
 Examples:
 - global.to-save-action -> Bewaren
 
-### Use ellipsis for changes on the page or view
-A button or link that does not refer to another page, but for example opens a popover or a modal window or brings up a new section, ends with an ellipse. However, as soon as this button or link has a directional icon (e.g. chevron, arrow) or visually sufficiently communicates the consequences, the ellipse should not be added. An ellipse will not be part of the label that can be entered by the content manager. It will have to be added by a developer to the codebase immediately after the label variable. This gives flexibility to replace an ellipse with, for example, a chevron without having to change the content or label type.
+### Ellipsis to indicate folow-up actions should not be part of the translation
+If an action has follow-up actions to complete it, it should end with an ellipsis. An ellipsis should not be part of the translation. It should be added by a developer to the codebase immediately after the translation key. This gives flexibility to replace an ellipse with, for example, a chevron without having to change the content or translation key.
